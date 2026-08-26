@@ -1,0 +1,960 @@
+/* =========================================================
+   TECHNOLOGIES SECTION
+========================================================= */
+
+.technologies-section {
+
+  position: relative;
+
+  width: calc(100% - 260px);
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 0px 0 180px;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.technologies-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  padding-bottom: 75px;
+
+  border-bottom: 1px solid #e8ecef;
+
+}
+
+
+.technologies-label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+}
+
+
+.tech-number {
+
+  color: #f15a24;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+}
+
+
+.tech-label-text {
+
+  color: #7d878f;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+}
+
+
+.technologies-heading {
+
+  text-align: right;
+
+}
+
+
+.technologies-heading p {
+
+  margin: 0 0 12px;
+
+  color: #7d878f;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+}
+
+
+.technologies-heading h2 {
+
+  margin: 0;
+
+ font-family: "Manrope", sans-serif;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 1.03;
+    letter-spacing: -4px;
+    font-weight: 700;
+    color: #0b1f33;
+
+}
+
+
+.technologies-heading h2 span {
+
+  color: #f15a24;
+
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.technology-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+
+  padding-top: 30px;
+
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.technology-card {
+
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  border: 1px solid #e7ebee;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f8fafb 100%
+    );
+
+  box-shadow:
+    0 15px 45px
+    rgba(
+      11,
+      31,
+      51,
+      .045
+    );
+
+  cursor: pointer;
+
+  transition:
+    transform .5s
+    cubic-bezier(.2,.7,.2,1),
+
+    box-shadow .5s ease,
+
+    border-color .4s ease;
+
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.technology-card:hover {
+
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(
+      241,
+      90,
+      36,
+      .35
+    );
+
+  box-shadow:
+    0 30px 70px
+    rgba(
+      11,
+      31,
+      51,
+      .10
+    );
+
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.technology-card-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+.technology-index {
+
+  color: #a2aab0;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+}
+
+
+.technology-category {
+
+  color: #9aa3aa;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.technology-icon {
+
+  position: relative;
+
+  width: 75px;
+
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px
+    rgba(
+      11,
+      31,
+      51,
+      .08
+    );
+
+  font-size: 48px;
+
+  transition:
+    transform .5s
+    cubic-bezier(.2,.7,.2,1),
+
+    box-shadow .5s ease;
+
+}
+
+
+.technology-card:hover
+.technology-icon {
+
+  transform:
+    rotate(-5deg)
+    scale(1.08);
+
+  box-shadow:
+    0 20px 40px
+    rgba(
+      11,
+      31,
+      51,
+      .13
+    );
+
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.technology-card.react
+.technology-icon {
+
+  color: #61dafb;
+
+}
+
+
+.technology-card.javascript
+.technology-icon {
+
+  color: #f7df1e;
+
+}
+
+
+.technology-card.html
+.technology-icon {
+
+  color: #e34f26;
+
+}
+
+
+.technology-card.css
+.technology-icon {
+
+  color: #1572b6;
+
+}
+
+
+.technology-card.node
+.technology-icon {
+
+  color: #339933;
+
+}
+
+
+.technology-card.python
+.technology-icon {
+
+  color: #3776ab;
+
+}
+
+
+.technology-card.php
+.technology-icon {
+
+  color: #777bb4;
+
+}
+
+
+.technology-card.mysql
+.technology-icon {
+
+  color: #00758f;
+
+}
+
+
+.technology-card.mongodb
+.technology-icon {
+
+  color: #47a248;
+
+}
+
+
+.technology-card.firebase
+.technology-icon {
+
+  color: #ffca28;
+
+}
+
+
+.technology-card.git
+.technology-icon {
+
+  color: #f05032;
+
+}
+
+
+.technology-card.github
+.technology-icon {
+
+  color: #181717;
+
+}
+
+
+.technology-card.figma
+.technology-icon {
+
+  color: #f24e1e;
+
+}
+
+
+.technology-card.aws
+.technology-icon {
+
+  color: #ff9900;
+
+}
+/* WORDPRESS */
+
+.technology-card.wordpress
+.technology-icon {
+  color: #21759b;
+}
+
+
+/* WOOCOMMERCE */
+
+.technology-card.woocommerce
+.technology-icon {
+  color: #96588a;
+}
+
+
+/* SHOPIFY */
+
+.technology-card.shopify
+.technology-icon {
+  color: #95bf47;
+}
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.technology-card-bottom {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+}
+
+
+.technology-card-bottom h3 {
+
+  margin: 0;
+
+  color: #0b1f33;
+
+  font-family:
+    "Manrope",
+    sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+}
+
+
+.technology-arrow {
+
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0b1f33;
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  transition:
+    transform .4s ease,
+
+    background .3s ease;
+
+}
+
+
+.technology-card:hover
+.technology-arrow {
+
+  transform:
+    translate(
+      3px,
+      -3px
+    );
+
+  background: #f15a24;
+
+}
+
+
+/* =========================================================
+   DECORATIVE GLOW
+========================================================= */
+
+.technology-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+
+  height: 150px;
+
+  right: -70px;
+
+  top: -70px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(
+      241,
+      90,
+      36,
+      .04
+    );
+
+  transition:
+    transform .6s ease;
+
+}
+
+
+.technology-card:hover::before {
+
+  transform:
+    scale(2);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.technology-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  color: #9ba3a9;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .technologies-section {
+
+    width:
+      calc(100% - 100px);
+
+  }
+
+
+  .technology-grid {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .technologies-section {
+
+    width:
+      calc(100% - 30px);
+
+    padding:
+      100px
+      0
+      120px;
+
+  }
+
+
+  .technologies-header {
+
+    display: block;
+
+    padding-bottom: 50px;
+
+  }
+
+
+  .technologies-heading {
+
+    margin-top: 30px;
+
+    text-align: left;
+
+  }
+
+
+  .technologies-heading h2 {
+
+    font-size: 38px;
+
+    letter-spacing: -2.5px;
+
+  }
+
+
+  .technology-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 10px;
+
+  }
+
+
+  .technology-card {
+
+    min-height: 210px;
+
+    padding: 18px;
+
+  }
+
+
+  .technology-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 15px;
+
+    font-size: 38px;
+
+  }
+
+
+  .technology-card-bottom h3 {
+
+    font-size: 17px;
+
+  }
+
+
+  .technology-arrow {
+
+    width: 29px;
+
+    height: 29px;
+
+    font-size: 12px;
+
+  }
+
+
+  .technology-footer {
+
+    font-size: 7px;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .technology-grid {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
+  .technology-card {
+
+    min-height: 190px;
+
+    padding: 15px;
+
+  }
+
+
+  .technology-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    font-size: 32px;
+
+  }
+
+}
+
+
+/* =========================================================
+   TECHNOLOGY FILTERS
+========================================================= */
+
+.technology-filters {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 28px 0 30px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+}
+
+
+.technology-filters::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   FILTER BUTTON
+========================================================= */
+
+.technology-filters button {
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  border: 1px solid #e3e8eb;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #7c858d;
+
+  padding: 12px 20px;
+
+  border-radius: 50px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  cursor: pointer;
+
+  transition:
+    color .3s ease,
+    background .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.technology-filters button:hover {
+
+  color: #0b1f33;
+
+  border-color:
+    rgba(241, 90, 36, .35);
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.technology-filters button.active {
+
+  color: #ffffff;
+
+  background: #0b1f33;
+
+  border-color: #0b1f33;
+
+  box-shadow:
+    0 10px 25px
+    rgba(
+      11,
+      31,
+      51,
+      .12
+    );
+
+}
+
+
+/* Orange active indicator */
+
+.technology-filters button.active::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -6px;
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #f15a24;
+
+  transform:
+    translateX(-50%);
+
+}
+
+
+/* =========================================================
+   GRID FILTER ANIMATION
+========================================================= */
+
+.technology-grid {
+
+  animation:
+    technologyGridIn
+    .45s
+    cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+@keyframes technologyGridIn {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(12px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .technology-filters {
+
+    gap: 6px;
+
+    padding:
+      22px 0
+      25px;
+
+    margin-right: -15px;
+
+    padding-right: 15px;
+
+  }
+
+
+  .technology-filters button {
+
+    padding:
+      10px 15px;
+
+    font-size: 8px;
+
+  }
+
+}

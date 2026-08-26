@@ -1,0 +1,748 @@
+/* =========================================================
+   SELECTED WORK
+========================================================= */
+
+.selected-work {
+  position: relative;
+  width: 100%;
+  background: #f7f8f9;
+  color: #0b1f33;
+  overflow: clip;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.projects-page-header {
+  width: min(1400px, calc(100% - 100px));
+  margin: 0 auto;
+  padding: 50px 0 90px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: end;
+  gap: 60px;
+}
+
+.projects-page-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.projects-page-label span {
+  color: #f15a24;
+}
+
+.projects-page-label strong {
+  font-weight: 700;
+}
+
+.projects-page-heading p {
+  margin: 0 0 12px;
+
+  font-size: 13px;
+  color: #7d858d;
+  letter-spacing: 0.5px;
+}
+
+.projects-page-heading h1 {
+  margin: 0;
+
+ font-family: "Manrope", sans-serif;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 1.03;
+    letter-spacing: -4px;
+    font-weight: 700;
+    color: #0b1f33;
+}
+
+.projects-page-heading h1 span {
+  color: #f15a24;
+}
+
+
+/* =========================================================
+   PROJECT LIST
+========================================================= */
+
+.projects-page-list {
+  position: relative;
+
+  width: min(1400px, calc(100% - 100px));
+  margin: 0 auto;
+
+  padding-bottom: 0;
+}
+
+
+/* =========================================================
+   PROJECT ITEM
+========================================================= */
+
+.projects-page-item {
+  position: relative;
+
+  height: 100vh;
+  min-height: 700px;
+
+  margin-bottom: 0;
+
+  /* IMPORTANT */
+  scroll-margin-top: 100px;
+}
+
+
+/*
+  Every project becomes sticky.
+  Project 01 stays first.
+  Project 02 comes over it.
+  Project 03 comes over 02.
+*/
+
+.projects-page-item {
+  position: sticky;
+  top: 90px;
+}
+
+
+/* =========================================================
+   STACK ORDER
+========================================================= */
+
+.projects-page-item:nth-child(1) {
+  z-index: 1;
+}
+
+.projects-page-item:nth-child(2) {
+  z-index: 2;
+}
+
+.projects-page-item:nth-child(3) {
+  z-index: 3;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.projects-page-card {
+  width: 100%;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.projects-page-image {
+  position: relative;
+
+  width: 100%;
+  height: min(72vh, 760px);
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #dce3e8;
+
+  box-shadow:
+    0 35px 90px rgba(11, 31, 51, 0.18);
+
+  transform: translateZ(0);
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.projects-page-image img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.01);
+
+  transition:
+    transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+
+
+/* =========================================================
+   ACTIVE PROJECT
+========================================================= */
+
+.project-page-active
+.projects-page-image img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.projects-page-image:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.projects-page-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 20, 32, 0.03) 15%,
+      rgba(5, 20, 32, 0.12) 40%,
+      rgba(5, 20, 32, 0.82) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.projects-page-number {
+  position: absolute;
+
+  top: 35px;
+  left: 40px;
+
+  z-index: 3;
+
+  color: #fff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.projects-page-content {
+  position: absolute;
+
+  left: 50px;
+  bottom: 55px;
+
+  z-index: 3;
+
+  max-width: 760px;
+
+  color: #fff;
+}
+
+
+/* CATEGORY */
+
+.projects-page-category {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #f15a24;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* TITLE */
+
+.projects-page-content h2 {
+  margin: 0 0 20px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(38px, 4vw, 68px);
+
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+
+  font-weight: 700;
+}
+
+
+/* DESCRIPTION */
+
+.projects-page-content p {
+  max-width: 480px;
+
+  margin: 0 0 30px;
+
+  color: rgba(255,255,255,.78);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   VIEW PROJECT BUTTON
+========================================================= */
+
+.projects-page-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  min-width: 170px;
+  height: 55px;
+
+  padding: 0 22px;
+
+  border-radius: 100px;
+
+  background: #fff;
+
+  color: #0b1f33;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    background .35s ease,
+    color .35s ease,
+    transform .35s ease;
+}
+
+.projects-page-button strong {
+  font-size: 18px;
+
+  transition:
+    transform .35s ease;
+}
+
+.projects-page-button:hover {
+  background: #f15a24;
+
+  color: #fff;
+
+  transform: translateY(-4px);
+}
+
+.projects-page-button:hover strong {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================================
+   BOTTOM DETAILS
+========================================================= */
+
+.projects-page-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 15px 4px 0;
+
+  color: #7d858d;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   RIGHT NAVIGATION
+========================================================= */
+
+.projects-page-navigation {
+  position: fixed;
+
+  right: 35px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 50;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #0b1f33;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+/* CURRENT */
+
+.projects-page-current {
+  min-width: 22px;
+
+  text-align: center;
+}
+
+
+/* LINE */
+
+.projects-page-line {
+  position: relative;
+
+  width: 2px;
+  height: 100px;
+
+  overflow: hidden;
+
+  background: #d8dde1;
+}
+
+
+/* ACTIVE LINE */
+
+.projects-page-line span {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background: #f15a24;
+
+  transition:
+    height .5s cubic-bezier(.2,.7,.2,1);
+}
+
+
+/* TOTAL */
+
+.projects-page-total {
+  color: #8b939a;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.projects-page-cta {
+  width: min(1400px, calc(100% - 100px));
+
+  margin: 0 auto;
+
+  padding: 130px 0 150px;
+
+  border-top: 1px solid #dfe3e6;
+}
+
+.projects-page-cta > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #f15a24;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.projects-page-cta h2 {
+  margin: 0 0 45px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(55px, 8vw, 120px);
+
+  line-height: .88;
+
+  letter-spacing: -6px;
+}
+
+.projects-page-cta h2 em {
+  font-style: normal;
+
+  color: #8b939a;
+}
+
+
+/* CTA BUTTON */
+
+.projects-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  padding: 0 10px 0 25px;
+
+  min-width: 220px;
+  height: 58px;
+
+  border-radius: 100px;
+
+  background: #0b1f33;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  transition:
+    background .3s ease,
+    transform .3s ease;
+}
+
+.projects-cta-button strong {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f15a24;
+
+  font-size: 18px;
+}
+
+.projects-cta-button:hover {
+  background: #f15a24;
+
+  transform: translateY(-4px);
+}
+
+.projects-cta-button:hover strong {
+  background: #fff;
+  color: #0b1f33;
+}
+
+
+.projects-page-heading {text-align: right;;}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .projects-page-header {
+    width: calc(100% - 50px);
+
+    padding: 120px 0 70px;
+
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  
+
+  .projects-page-list {
+    width: calc(100% - 50px);
+  }
+
+  .projects-page-item {
+    top: 75px;
+
+    height: 88vh;
+    min-height: 600px;
+
+    margin-bottom: 0;
+  }
+
+  .projects-page-image {
+    height: 68vh;
+
+    border-radius: 8px;
+  }
+
+  .projects-page-content {
+    left: 30px;
+    bottom: 35px;
+
+    max-width: calc(100% - 60px);
+  }
+
+  .projects-page-content h2 {
+    font-size: 50px;
+    letter-spacing: -3px;
+  }
+
+  .projects-page-navigation {
+    right: 18px;
+  }
+
+  .projects-page-cta {
+    width: calc(100% - 50px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .projects-page-header {
+    width: calc(100% - 40px);
+
+    padding: 100px 0 55px;
+  }
+
+  .projects-page-heading h1 {
+    font-size: 38px;
+
+    letter-spacing: -2.5px;
+  }
+
+  .projects-page-list {
+    width: calc(100% - 30px);
+  }
+
+  .projects-page-item {
+    top: 65px;
+
+    height: 78vh;
+    min-height: 500px;
+
+    margin-bottom: 0;
+  }
+
+  .projects-page-image {
+    height: 65vh;
+
+    border-radius: 7px;
+  }
+
+  .projects-page-number {
+    top: 22px;
+    left: 22px;
+  }
+
+  .projects-page-content {
+    left: 22px;
+    bottom: 25px;
+
+    max-width: calc(100% - 44px);
+  }
+
+  .projects-page-category {
+    margin-bottom: 12px;
+
+    font-size: 8px;
+  }
+
+  .projects-page-content h2 {
+    margin-bottom: 15px;
+
+    font-size: 36px;
+
+    line-height: .92;
+
+    letter-spacing: -2px;
+  }
+
+  .projects-page-content p {
+    margin-bottom: 20px;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+  .projects-page-button {
+    min-width: 145px;
+    height: 48px;
+
+    font-size: 8px;
+  }
+
+  .projects-page-bottom {
+    font-size: 7px;
+
+    letter-spacing: 1px;
+  }
+
+  .projects-page-navigation {
+    right: 10px;
+
+    font-size: 8px;
+  }
+
+  .projects-page-line {
+    height: 70px;
+  }
+
+  .projects-page-cta {
+    width: calc(100% - 30px);
+
+    padding: 90px 0 100px;
+  }
+
+  .projects-page-cta h2 {
+    font-size: 52px;
+
+    letter-spacing: -3px;
+  }
+}

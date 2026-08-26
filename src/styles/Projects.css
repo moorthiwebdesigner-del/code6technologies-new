@@ -1,0 +1,674 @@
+/* =========================================================
+   CODE6 — PROJECTS PAGE
+   Premium Light Theme
+========================================================= */
+
+.projects-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7f8fa;
+  color: #09243a;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.projects-page-header {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 110px 30px 85px;
+  border-bottom: 1px solid rgba(9, 36, 58, 0.1);
+}
+
+.projects-page-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 70px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.projects-page-label span {
+  color: #ff5722;
+  font-weight: 800;
+}
+
+.projects-page-label strong {
+  color: #09243a;
+}
+
+.projects-page-meta {
+  position: absolute;
+  top: 115px;
+  right: 30px;
+
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  color: #a1aab3;
+}
+
+.projects-page-heading {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.projects-page-heading p {
+  max-width: 210px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #6d7b87;
+}
+
+.projects-page-heading h1 {
+  margin: 0;
+
+  font-size: clamp(70px, 9vw, 145px);
+  line-height: 0.84;
+  letter-spacing: -7px;
+  font-weight: 800;
+  color: #09243a;
+}
+
+.projects-page-heading h1 span {
+  color: #ff5722;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.projects-page-navigation {
+  position: fixed;
+
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+
+.projects-page-current,
+.projects-page-total {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.projects-page-current {
+  color: #ff5722;
+}
+
+.projects-page-total {
+  color: #9ba5ad;
+}
+
+.projects-page-line {
+  width: 1px;
+  height: 90px;
+  background: rgba(9, 36, 58, 0.15);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-page-line span {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 1px;
+
+  background: #ff5722;
+
+  transition: height 0.5s ease;
+}
+
+
+/* =========================================================
+   PROJECT LIST
+========================================================= */
+
+.projects-page-list {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 30px 100px;
+}
+
+.projects-page-item {
+  margin-bottom: 100px;
+}
+
+.projects-page-card {
+  width: 100%;
+  background: #ffffff;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px rgba(9, 36, 58, 0.07);
+
+  transform: scale(0.97);
+
+  opacity: 0.72;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.projects-page-item.project-page-active
+  .projects-page-card {
+  transform: scale(1);
+  opacity: 1;
+
+  box-shadow:
+    0 35px 90px rgba(9, 36, 58, 0.13);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.projects-page-image {
+  position: relative;
+
+  width: 100%;
+  height: 650px;
+
+  overflow: hidden;
+}
+
+.projects-page-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+.projects-page-item:hover
+  .projects-page-image img {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.projects-page-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(9, 36, 58, 0.04) 20%,
+      rgba(9, 36, 58, 0.2) 48%,
+      rgba(9, 36, 58, 0.88) 100%
+    );
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.projects-page-number {
+  position: absolute;
+
+  top: 35px;
+  left: 35px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.projects-page-content {
+  position: absolute;
+
+  left: 55px;
+  bottom: 55px;
+
+  max-width: 650px;
+
+  color: #ffffff;
+}
+
+.projects-page-category {
+  display: block;
+
+  margin-bottom: 17px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #ff7043;
+}
+
+.projects-page-content h2 {
+  margin: 0 0 20px;
+
+  font-size: clamp(45px, 6vw, 82px);
+
+  line-height: 0.92;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.projects-page-content h2 span {
+  color: #ff5722;
+}
+
+.projects-page-content p {
+  max-width: 460px;
+
+  margin: 0 0 30px;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.76);
+}
+
+
+/* =========================================================
+   PROJECT BUTTON
+========================================================= */
+
+.projects-page-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 12px 12px 12px 20px;
+
+  border-radius: 100px;
+
+  background: #ffffff;
+
+  color: #09243a;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.projects-page-button strong {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #ff5722;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.projects-page-button:hover {
+  background: #ff5722;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+.projects-page-button:hover strong {
+  background: #09243a;
+}
+
+
+/* =========================================================
+   BOTTOM DETAILS
+========================================================= */
+
+.projects-page-bottom {
+  height: 55px;
+
+  padding: 0 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(9, 36, 58, 0.08);
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 700;
+
+  color: #8a969f;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.projects-page-cta {
+  position: relative;
+
+  background: #09243a;
+
+  color: #ffffff;
+
+  padding: 120px 30px 140px;
+
+  overflow: hidden;
+}
+
+.projects-page-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 550px;
+  height: 550px;
+
+  right: -180px;
+  top: -200px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 50%;
+}
+
+.projects-page-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -80px;
+  top: -120px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: 50%;
+}
+
+.projects-cta-inner {
+  position: relative;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+.projects-cta-label {
+  margin-bottom: 30px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #ff5722;
+}
+
+.projects-page-cta h2 {
+  margin: 0;
+
+  font-size: clamp(55px, 8vw, 110px);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  font-weight: 800;
+}
+
+.projects-page-cta h2 span {
+  color: #ff5722;
+}
+
+.projects-page-cta p {
+  max-width: 430px;
+
+  margin: 35px 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.6);
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.projects-cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 8px 8px 8px 22px;
+
+  border-radius: 100px;
+
+  background: #ffffff;
+
+  color: #09243a;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.projects-cta-button strong {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #ff5722;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.projects-cta-button:hover {
+  transform: translateY(-3px);
+  background: #ff5722;
+  color: #ffffff;
+}
+
+.projects-cta-button:hover strong {
+  background: #09243a;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .projects-page-header {
+    padding-top: 90px;
+  }
+
+  .projects-page-heading {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .projects-page-heading h1 {
+    font-size: clamp(65px, 15vw, 110px);
+  }
+
+  .projects-page-meta {
+    display: none;
+  }
+
+  .projects-page-navigation {
+    display: none;
+  }
+
+  .projects-page-image {
+    height: 560px;
+  }
+
+  .projects-page-content {
+    left: 35px;
+    right: 35px;
+    bottom: 40px;
+  }
+
+  .projects-page-content h2 {
+    font-size: 58px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .projects-page-header {
+    padding:
+      70px 20px
+      60px;
+  }
+
+  .projects-page-label {
+    margin-bottom: 50px;
+  }
+
+  .projects-page-heading h1 {
+    font-size: 62px;
+    letter-spacing: -3px;
+  }
+
+  .projects-page-list {
+    padding:
+      45px 15px
+      60px;
+  }
+
+  .projects-page-item {
+    margin-bottom: 55px;
+  }
+
+  .projects-page-image {
+    height: 500px;
+  }
+
+  .projects-page-content {
+    left: 25px;
+    right: 25px;
+    bottom: 30px;
+  }
+
+  .projects-page-content h2 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .projects-page-content p {
+    font-size: 12px;
+  }
+
+  .projects-page-number {
+    top: 25px;
+    left: 25px;
+  }
+
+  .projects-page-bottom {
+    padding: 0 18px;
+    font-size: 7px;
+  }
+
+  .projects-page-cta {
+    padding:
+      90px 20px
+      100px;
+  }
+
+  .projects-page-cta h2 {
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
+
+}
