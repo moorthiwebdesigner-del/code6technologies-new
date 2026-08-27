@@ -196,7 +196,7 @@ isolation: isolate;
 
   margin: auto;
 
-  padding: 80px 0 50px;
+  padding: 50px 0 50px;
 }
 
 .projects-hero-top {
@@ -406,7 +406,7 @@ isolation: isolate;
 
   margin: auto;
 
-  padding: 110px 0 140px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -484,6 +484,7 @@ isolation: isolate;
   transition:
     transform 0.45s ease,
     box-shadow 0.45s ease;
+    border-radius: 10px;
 }
 
 .project-card:hover {
@@ -778,7 +779,7 @@ isolation: isolate;
 
   margin: auto;
 
-  padding: 110px 0 100px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 
@@ -880,7 +881,7 @@ isolation: isolate;
 
   margin: auto;
 
-  padding: 90px 0 110px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 
@@ -939,7 +940,7 @@ isolation: isolate;
   height: 62px;
     border-radius: 0;
   padding: 0 22px;
-
+    border-radius: 100px;
   display: flex;
 
   align-items: center;

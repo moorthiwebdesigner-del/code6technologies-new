@@ -182,7 +182,7 @@ isolation: isolate;
 
   margin: auto;
 
-  padding: 80px 0 50px;
+  padding: 50px 0 50px;
 }
 
 .careers-hero-top {
@@ -540,7 +540,7 @@ isolation: isolate;
 
   margin: 0 auto;
 
-  padding: 110px 0 130px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
@@ -748,8 +748,8 @@ justify-content: space-between;
 }
 
 .career-apply-button {
-  min-width: 210px;
-
+  min-width: 220px;
+    border-radius: 100px;
   min-height: 62px;
 
   padding: 0 22px;
@@ -766,7 +766,7 @@ justify-content: space-between;
 
   text-decoration: none;
 
-  font-size: 9px;
+  font-size: 10px;
 
   font-weight: 700;
 
@@ -800,7 +800,7 @@ justify-content: space-between;
 
   margin: 0 auto;
 
-  padding: 90px 0 110px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 
@@ -853,7 +853,7 @@ justify-content: space-between;
   padding: 0 22px;
 
   display: flex;
-
+    border-radius: 100px;
   justify-content: space-between;
 
   align-items: center;

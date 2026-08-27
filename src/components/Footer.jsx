@@ -49,7 +49,7 @@ export default function Footer() {
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/services">Services</Link>
-
+<Link to="/work">Projects</Link>
             </div>
 
 
@@ -59,10 +59,14 @@ export default function Footer() {
                 WORK
               </span>
 
-              <Link to="/work">Projects</Link>
+              
               <Link to="/technologies">Technologies</Link>
+              <Link to="/careers">Careers</Link>
               <Link to="/blog">
                 Blog
+              </Link>
+              <Link to="/contact">
+                Contact Us
               </Link>
 
             </div>
@@ -73,9 +77,12 @@ export default function Footer() {
               <span className="footer-heading">
                 CONNECT
               </span>
-
-              <Link to="/contact">Contact</Link>
-
+ 
+              <a href="#">
+                Facebook
+                <FiArrowUpRight />
+              </a>
+              
               <a href="#">
                 Instagram
                 <FiArrowUpRight />
@@ -83,6 +90,10 @@ export default function Footer() {
 
               <a href="#">
                 LinkedIn
+                <FiArrowUpRight />
+              </a>
+              <a href="#">
+                Youtube
                 <FiArrowUpRight />
               </a>
 
