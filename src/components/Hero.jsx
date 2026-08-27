@@ -176,7 +176,7 @@ export default function Hero() {
   {/* MAIN IMAGE CARD */}
   <div className="visual-card">
 
-    <img
+   <img
   src={hero}
   alt="Code6 Technologies digital technology"
   className="hero-visual-image"
