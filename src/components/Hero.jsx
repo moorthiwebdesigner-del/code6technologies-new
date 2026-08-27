@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.webp";
 import "../styles/Hero.css";
 
 
@@ -177,10 +177,14 @@ export default function Hero() {
   <div className="visual-card">
 
     <img
-      src={hero}
-      alt="Technology"
-      className="hero-visual-image"
-    />
+  src={hero}
+  alt="Code6 Technologies digital technology"
+  className="hero-visual-image"
+  width="800"
+  height="800"
+  fetchPriority="high"
+  decoding="async"
+/>
 
     <div className="visual-image-overlay"></div>
 
