@@ -61,8 +61,8 @@ export default function Footer() {
 
               <Link to="/work">Projects</Link>
               <Link to="/technologies">Technologies</Link>
-              <Link to="/testimonials">
-                Testimonials
+              <Link to="/blog">
+                Blog
               </Link>
 
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
                 <FiArrowUpRight />
               </a>
 
-              <a href="https://www.linkedin.com/in/moorthi-arumugam-1aa3a229/">
+              <a href="#">
                 LinkedIn
                 <FiArrowUpRight />
               </a>

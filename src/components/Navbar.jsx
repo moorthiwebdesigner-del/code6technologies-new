@@ -24,39 +24,68 @@ export default function Navbar() {
       <div className="navbar-inner">
 
         {/* LOGO */}
-        <NavLink to="/" className="brand-logo" onClick={closeMenu}>
+        <NavLink
+          to="/"
+          end
+          className="brand-logo"
+          onClick={closeMenu}
+        >
           <img
             src={logo}
             alt="Code6 Technologies"
           />
         </NavLink>
 
+
         {/* DESKTOP NAVIGATION */}
         <nav className="desktop-menu">
+
           {navItems.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}
+              end={item.path === "/"}
               className={({ isActive }) =>
-                isActive ? "nav-link active" : "nav-link"
+                isActive
+                  ? "nav-link active"
+                  : "nav-link"
               }
             >
               {item.name}
             </NavLink>
           ))}
+
         </nav>
 
-        {/* CTA */}
-        <NavLink to="/contact" className="nav-button">
+
+        {/* CONTACT CTA */}
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive
+              ? "nav-button active"
+              : "nav-button"
+          }
+          onClick={closeMenu}
+        >
           <span>Let's Talk</span>
           <strong>↗</strong>
         </NavLink>
 
+
         {/* MOBILE MENU BUTTON */}
         <button
-          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          type="button"
+          className={`menu-toggle ${
+            menuOpen ? "open" : ""
+          }`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Open navigation menu"
+          aria-label={
+            menuOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          }
+          aria-expanded={menuOpen}
         >
           <span></span>
           <span></span>
@@ -64,8 +93,13 @@ export default function Navbar() {
 
       </div>
 
+
       {/* MOBILE MENU */}
-      <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+      <div
+        className={`mobile-menu ${
+          menuOpen ? "show" : ""
+        }`}
+      >
 
         <div className="mobile-menu-inner">
 
@@ -73,6 +107,7 @@ export default function Navbar() {
             <NavLink
               key={item.path}
               to={item.path}
+              end={item.path === "/"}
               onClick={closeMenu}
               className={({ isActive }) =>
                 isActive
@@ -84,10 +119,16 @@ export default function Navbar() {
             </NavLink>
           ))}
 
+
+          {/* MOBILE CONTACT */}
           <NavLink
             to="/contact"
             onClick={closeMenu}
-            className="mobile-cta"
+            className={({ isActive }) =>
+              isActive
+                ? "mobile-cta active"
+                : "mobile-cta"
+            }
           >
             <span>Let's Talk</span>
             <strong>↗</strong>
@@ -96,6 +137,7 @@ export default function Navbar() {
         </div>
 
       </div>
+
     </header>
   );
 }

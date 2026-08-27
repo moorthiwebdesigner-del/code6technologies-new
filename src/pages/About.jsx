@@ -1,95 +1,136 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import {
+  ArrowUpRight,
+  Code2,
+  Lightbulb,
+  Layers3,
+  UsersRound,
+  Target,
+  Sparkles,
+} from "lucide-react";
+
 import "../styles/About.css";
+import SEO from "../components/SEO";
 
 export default function About() {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".about-reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const values = [
+    {
+      number: "01",
+      icon: Lightbulb,
+      title: "Think Different",
+      text: "We challenge ordinary ideas and look for smarter ways to solve complex digital problems.",
+    },
+    {
+      number: "02",
+      icon: Target,
+      title: "Purpose First",
+      text: "Every design decision and every line of code starts with a clear business objective.",
+    },
+    {
+      number: "03",
+      icon: Layers3,
+      title: "Built to Scale",
+      text: "We create digital products that are ready to grow with your business.",
+    },
+    {
+      number: "04",
+      icon: UsersRound,
+      title: "Built Together",
+      text: "We work closely with our clients to turn ideas into meaningful digital experiences.",
+    },
+  ];
+
+  const stats = [
+    ["01", "DIGITAL", "EXPERIENCES"],
+    ["02", "MODERN", "TECHNOLOGY"],
+    ["03", "CREATIVE", "THINKING"],
+    ["04", "LONG TERM", "PARTNERSHIPS"],
+  ];
+
   return (
+    <>
+            <SEO
+  title="About Code6 Technologies | Technology with Purpose"
+  description="Learn about Code6 Technologies, our approach to design and technology, and how we create meaningful digital experiences for modern businesses."
+/>
     <main className="about-page">
 
-      {/* ================================
-          ABOUT HERO
-      ================================= */}
+      {/* BACKGROUND */}
+
+      <div className="about-background">
+        <div className="about-grid"></div>
+
+        <div className="about-orb about-orb-one"></div>
+        <div className="about-orb about-orb-two"></div>
+
+        <div className="about-circle"></div>
+      </div>
+
+
+      {/* HERO */}
 
       <section className="about-hero">
 
         <div className="about-hero-top">
+
           <div className="about-label">
-            <span>01</span>
-            <strong>WHO WE ARE</strong>
+            <span>02</span>
+            <strong>ABOUT CODE6</strong>
           </div>
 
-          <span className="about-meta">
-            CODE6 TECHNOLOGIES · 2026
-          </span>
+          <div className="about-meta">
+            DIGITAL / DESIGN / TECHNOLOGY
+          </div>
+
         </div>
 
-        <div className="about-hero-content">
 
-          <div className="about-hero-heading">
+        <div className="about-hero-content about-reveal">
 
-            <p>
-              Technology with purpose.
+          <div>
+
+            <p className="about-eyebrow">
+              WHO WE ARE
             </p>
 
             <h1>
-              We turn ideas into
+              We build
               <br />
-              <span>digital experiences.</span>
+              <em>what matters.</em>
             </h1>
 
           </div>
 
-          <div className="about-hero-text">
+
+          <div className="about-hero-description">
+
+            <span>01 — OUR STORY</span>
 
             <p>
-              Code6 Technologies is a digital technology company focused
-              on building meaningful products, intelligent solutions and
-              high-performance digital experiences for modern businesses.
-            </p>
-
-            <Link to="/contact" className="about-link">
-              Start a Conversation
-              <span>↗</span>
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ================================
-          INTRO
-      ================================= */}
-
-      <section className="about-intro">
-
-        <div className="about-section-label">
-          <span>02</span>
-          <strong>OUR APPROACH</strong>
-        </div>
-
-        <div className="about-intro-content">
-
-          <h2>
-            We believe great
-            <span> technology</span>
-            should make things
-            <span> simpler.</span>
-          </h2>
-
-          <div className="about-intro-copy">
-
-            <p>
-              From the first idea to the final product, we combine strategy,
-              design and technology to create digital solutions that are
-              useful, scalable and built to last.
-            </p>
-
-            <p>
-              Our approach is simple — understand the problem, create the
-              right experience and build technology that delivers measurable
-              value.
+              CODE6 Technologies is a digital technology
+              studio focused on creating modern websites,
+              applications and digital solutions for ambitious
+              businesses.
             </p>
 
           </div>
@@ -99,179 +140,234 @@ export default function About() {
       </section>
 
 
-      {/* ================================
-          STATS
-      ================================= */}
+      {/* INTRO */}
 
-      <section className="about-stats">
-
-        <div className="about-stat">
-          <strong>150<span>+</span></strong>
-          <p>Happy Clients</p>
-        </div>
-
-        <div className="about-stat">
-          <strong>250<span>+</span></strong>
-          <p>Projects Delivered</p>
-        </div>
-
-        <div className="about-stat">
-          <strong>15<span>+</span></strong>
-          <p>Years of Excellence</p>
-        </div>
-
-        <div className="about-stat">
-          <strong>10<span>+</span></strong>
-          <p>Countries Served</p>
-        </div>
-
-      </section>
-
-
-      {/* ================================
-          VALUES
-      ================================= */}
-
-      <section className="about-values">
-
-        <div className="about-section-label">
-          <span>03</span>
-          <strong>WHAT DRIVES US</strong>
-        </div>
-
-        <div className="about-values-heading">
-
-          <p>
-            Our principles shape
-            <br />
-            everything we build.
-          </p>
-
-          <h2>
-            Built on
-            <span> purpose.</span>
-          </h2>
-
-        </div>
-
-
-        <div className="about-values-grid">
-
-          <article>
-            <span>01</span>
-
-            <h3>Think Clearly</h3>
-
-            <p>
-              We start by understanding the real challenge before
-              choosing the technology.
-            </p>
-
-            <b>↗</b>
-          </article>
-
-
-          <article>
-            <span>02</span>
-
-            <h3>Design Better</h3>
-
-            <p>
-              Every interaction should feel intentional, simple
-              and meaningful.
-            </p>
-
-            <b>↗</b>
-          </article>
-
-
-          <article>
-            <span>03</span>
-
-            <h3>Build Smart</h3>
-
-            <p>
-              Clean architecture and modern technology create
-              products ready to scale.
-            </p>
-
-            <b>↗</b>
-          </article>
-
-
-          <article>
-            <span>04</span>
-
-            <h3>Grow Together</h3>
-
-            <p>
-              We build long-term relationships, not just one-time
-              digital projects.
-            </p>
-
-            <b>↗</b>
-          </article>
-
-        </div>
-
-      </section>
-
-
-      {/* ================================
-          MISSION
-      ================================= */}
-
-      <section className="about-mission">
+      <section className="about-intro about-reveal">
 
        
 
-        <div className="about-mission-content">
-<span>04 </span>
-          <span>OUR MISSION</span>
+        <div className="about-intro-content">
+
+          <span> 02 - ABOUT CODE6 TECHNOLOGIES</span>
 
           <h2>
-            Make technology
+            Technology should
             <br />
-            <em>work for people.</em>
+            feel <em>simple.</em>
           </h2>
 
-          <p>
-            We create digital experiences that connect people,
-            simplify business and turn ambitious ideas into
-            meaningful outcomes.
-          </p>
+          <div className="about-intro-grid">
+
+            <p>
+              We believe great digital products sit at the
+              intersection of technology, design and business.
+              Our goal is to remove unnecessary complexity and
+              create experiences people actually enjoy using.
+            </p>
+
+            <p>
+              From the first idea to the final launch, we
+              combine strategy, creative thinking and modern
+              technology to build digital products that make
+              a real difference.
+            </p>
+
+          </div>
 
         </div>
 
       </section>
 
 
-      {/* ================================
-          CTA
-      ================================= */}
+      {/* STATS */}
 
-      <section className="about-cta">
+      <section className="about-stats about-reveal">
 
-        <span>
-          HAVE AN IDEA?
-        </span>
+        {stats.map(([number, first, second]) => (
+          <div
+            className="about-stat"
+            key={number}
+          >
 
-        <h2>
-          Let's build
-          <br />
-          <em>something remarkable.</em>
-        </h2>
+            <span>{number}</span>
+
+            <strong>
+              {first}
+              <br />
+              {second}
+            </strong>
+
+          </div>
+        ))}
+
+      </section>
+
+
+      {/* VALUES */}
+
+      <section className="about-values">
+
+        <div className="about-section-heading about-reveal">
+
+          <div>
+
+            <span>03 — OUR VALUES</span>
+
+            <h2>
+              What drives
+              <br />
+              <em>us.</em>
+            </h2>
+
+          </div>
+
+          <p>
+            The principles behind every project,
+            partnership and product we create.
+          </p>
+
+        </div>
+
+
+        <div className="about-value-grid">
+
+          {values.map((value) => {
+
+            const ValueIcon = value.icon;
+
+            return (
+              <article
+                className="about-value-card about-reveal"
+                key={value.number}
+              >
+
+                <div className="about-value-top">
+
+                  <span>
+                    {value.number}
+                  </span>
+
+                  <ValueIcon
+                    size={25}
+                    strokeWidth={1.25}
+                  />
+
+                </div>
+
+
+                <div className="about-value-content">
+
+                  <h3>
+                    {value.title}
+                  </h3>
+
+                  <p>
+                    {value.text}
+                  </p>
+
+                </div>
+
+
+                <div className="about-value-line"></div>
+
+              </article>
+            );
+          })}
+
+        </div>
+
+      </section>
+
+
+      {/* TECHNOLOGY */}
+
+      <section className="about-technology about-reveal">
+
+        
+
+        <div className="about-tech-content">
+
+          <span>04 - HOW WE WORK</span>
+
+          <h2>
+            Design with
+            <br />
+            <em>technology.</em>
+          </h2>
+
+          <p>
+            We don't separate creativity from technology.
+            Our designers and developers work together from
+            the beginning to create digital products that are
+            beautiful, functional and technically strong.
+          </p>
+
+          <div className="about-tech-tags">
+
+            <span>STRATEGY</span>
+            <span>UI / UX</span>
+            <span>DEVELOPMENT</span>
+            <span>TECHNOLOGY</span>
+
+          </div>
+
+        </div>
+
+
+        <div className="about-tech-icon">
+
+          <div className="about-tech-icon-inner">
+            <Code2
+              size={42}
+              strokeWidth={1}
+            />
+          </div>
+
+          <Sparkles
+            size={18}
+            strokeWidth={1.2}
+          />
+
+        </div>
+
+      </section>
+
+
+      {/* CTA */}
+
+      <section className="about-cta about-reveal">
+
+       
+
+        <div className="about-cta-content">
+
+          <span>LET'S CREATE</span>
+
+          <h2>
+            Have an idea?
+            <br />
+            <em>Let's build it.</em>
+          </h2>
+
+        </div>
+
 
         <Link
           to="/contact"
           className="about-cta-button"
         >
           <span>START A PROJECT</span>
-          <strong>↗</strong>
+
+          <ArrowUpRight
+            size={20}
+            strokeWidth={1.4}
+          />
+
         </Link>
 
       </section>
 
     </main>
+    </>
   );
 }

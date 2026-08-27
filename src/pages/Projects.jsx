@@ -1,311 +1,384 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {
+  ArrowUpRight,
+  Globe2,
+  Smartphone,
+  LayoutDashboard,
+  ShoppingBag,
+} from "lucide-react";
+
 import "../styles/Projects.css";
+import SEO from "../components/SEO";
 
 export default function Projects() {
-  const [activeProject, setActiveProject] = useState(0);
-
-  const projects = [
-    {
-      number: "01",
-      category: "WEB DEVELOPMENT",
-      title: "Digital Business",
-      title2: "Platform",
-      description:
-        "A modern digital platform designed to create a strong and scalable business presence.",
-      services: "STRATEGY · DESIGN · DEVELOPMENT",
-      year: "2026",
-      image:
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1800&q=85",
-      slug: "/projects/digital-business-platform",
-    },
-
-    {
-      number: "02",
-      category: "UI / UX DESIGN",
-      title: "Modern Brand",
-      title2: "Experience",
-      description:
-        "A premium digital experience focused on brand identity, usability and visual impact.",
-      services: "RESEARCH · UX · INTERFACE DESIGN",
-      year: "2026",
-      image:
-        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1800&q=85",
-      slug: "/projects/modern-brand-experience",
-    },
-
-    {
-      number: "03",
-      category: "MOBILE APPLICATION",
-      title: "Smart Mobile",
-      title2: "Solution",
-      description:
-        "A clean and intuitive mobile product built around performance and user experience.",
-      services: "PRODUCT · DEVELOPMENT · TECHNOLOGY",
-      year: "2026",
-      image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1800&q=85",
-      slug: "/projects/smart-mobile-solution",
-    },
-  ];
-
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll(
-        ".projects-page-item"
-      );
+    const items = document.querySelectorAll(".project-reveal");
 
-      if (!sections.length) return;
-
-      const viewportCenter = window.innerHeight * 0.5;
-
-      let closestIndex = 0;
-      let closestDistance = Infinity;
-
-      sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-
-        const center =
-          rect.top + rect.height / 2;
-
-        const distance = Math.abs(
-          viewportCenter - center
-        );
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestIndex = index;
-        }
-      });
-
-      setActiveProject(closestIndex);
-    };
-
-    handleScroll();
-
-    window.addEventListener(
-      "scroll",
-      handleScroll,
-      { passive: true }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },
+      { threshold: 0.12 }
     );
 
-    window.addEventListener(
-      "resize",
-      handleScroll
-    );
+    items.forEach((item) => observer.observe(item));
 
-    return () => {
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
-
-      window.removeEventListener(
-        "resize",
-        handleScroll
-      );
-    };
+    return () => observer.disconnect();
   }, []);
 
+const projects = [
+  {
+    number: "01",
+    category: "WEB DEVELOPMENT",
+    title: "Digital Business Platform",
+    description:
+      "A modern digital platform designed to improve customer experience, performance and business growth.",
+    year: "2026",
+    type: "Web Platform",
+    image: "/images/projects/project-01.jpg",
+  },
+
+  {
+    number: "02",
+    category: "MOBILE APP",
+    title: "Connected Mobile Experience",
+    description:
+      "A scalable mobile experience designed to connect businesses with customers through a simple and intuitive interface.",
+    year: "2026",
+    type: "Mobile Application",
+    image: "/images/projects/project-02.jpg",
+  },
+
+  {
+    number: "03",
+    category: "UI / UX DESIGN",
+    title: "Premium Digital Experience",
+    description:
+      "A carefully crafted interface focused on clarity, usability, visual identity and meaningful interactions.",
+    year: "2026",
+    type: "Product Design",
+    image: "/images/projects/project-03.jpg",
+  },
+
+  {
+    number: "04",
+    category: "DIGITAL SOLUTIONS",
+    title: "Business Management System",
+    description:
+      "A custom technology solution built to simplify workflows, improve efficiency and support scalable operations.",
+    year: "2026",
+    type: "Business Solution",
+    image: "/images/projects/project-04.jpg",
+  },
+];
   return (
+    <>
+                <SEO
+  title="Our Projects | Digital Experiences by Code6 Technologies"
+  description="Explore selected Code6 Technologies projects including digital platforms, mobile experiences, premium websites and custom business solutions."
+/>
     <main className="projects-page">
 
-      {/* =========================================
-          HERO
-      ========================================= */}
+      {/* BACKGROUND */}
 
-      <section className="projects-page-header">
+      <div className="projects-background">
+        <div className="projects-grid"></div>
 
-        <div className="projects-page-label">
-          <span>03</span>
-          <strong>OUR WORK</strong>
+        <div className="projects-glow projects-glow-one"></div>
+        <div className="projects-glow projects-glow-two"></div>
+
+        <div className="projects-circle"></div>
+      </div>
+
+
+      {/* HERO */}
+
+      <section className="projects-hero">
+
+        <div className="projects-hero-top">
+
+          <div className="projects-label">
+            <span>04</span>
+            <strong>SELECTED WORK</strong>
+          </div>
+
+          <div className="projects-hero-note">
+            DIGITAL PRODUCTS / EXPERIENCES / SOLUTIONS
+          </div>
+
         </div>
 
-        <div className="projects-page-meta">
-          CODE6 TECHNOLOGIES · 2026
-        </div>
 
-        <div className="projects-page-heading">
+        <div className="projects-hero-content project-reveal">
 
-          <p>
-            Selected work. Real digital experiences.
-          </p>
+          <div>
 
-          <h1>
-            Selected
-            <br />
-            <span>Projects.</span>
-          </h1>
+            <p className="projects-eyebrow">
+              SELECTED PROJECTS
+            </p>
+
+            <h1>
+              Work that
+              <br />
+              <em>speaks.</em>
+            </h1>
+
+          </div>
+
+
+          <div className="projects-hero-description">
+
+            <span>01 — OUR WORK</span>
+
+            <p>
+              We create digital products and experiences
+              that combine technology, design and real
+              business thinking.
+            </p>
+
+          </div>
 
         </div>
 
       </section>
 
 
-      {/* =========================================
-          PROJECT NAVIGATION
-      ========================================= */}
+      {/* INTRO */}
 
-      <div className="projects-page-navigation">
+      <section className="projects-intro project-reveal">
 
-        <span className="projects-page-current">
-          {String(activeProject + 1).padStart(2, "0")}
-        </span>
+       
+        <div>
 
-        <div className="projects-page-line">
-          <span
-            style={{
-              height: `${
-                ((activeProject + 1) /
-                  projects.length) *
-                100
-              }%`,
-            }}
-          />
+          <span>02 - OUR SELECTED WORK</span>
+
+          <h2>
+            Ideas turned into
+            <br />
+            <em>digital reality.</em>
+          </h2>
+
+          <p>
+            Every project starts with a problem worth solving.
+            We work closely with businesses to transform ideas
+            into useful, beautiful and scalable digital products.
+          </p>
+
         </div>
 
-        <span className="projects-page-total">
-          {String(projects.length).padStart(2, "0")}
-        </span>
-
-      </div>
+      </section>
 
 
-      {/* =========================================
-          PROJECT LIST
-      ========================================= */}
+      {/* PROJECTS */}
 
-      <section className="projects-page-list">
+      <section className="projects-list">
 
-        {projects.map((project, index) => (
+        <div className="projects-section-heading project-reveal">
 
-          <article
-            className={`projects-page-item ${
-              activeProject === index
-                ? "project-page-active"
-                : ""
-            }`}
-            key={project.number}
-          >
+          <div>
+            <span>03 — PORTFOLIO</span>
 
-            <div className="projects-page-card">
+            <h2>
+              Selected
+              <br />
+              <em>projects.</em>
+            </h2>
+          </div>
 
-              {/* IMAGE */}
+          <p>
+            A selection of digital experiences,
+            platforms and solutions created by Code6.
+          </p>
 
-              <div className="projects-page-image">
-
-                <img
-                  src={project.image}
-                  alt={`${project.title} ${project.title2}`}
-                />
-
-                <div className="projects-page-overlay" />
-
-                <span className="projects-page-number">
-                  {project.number}
-                </span>
+        </div>
 
 
-                {/* PROJECT CONTENT */}
+        <div className="project-cards">
 
-                <div className="projects-page-content">
+          {projects.map((project) => {
 
-                  <span className="projects-page-category">
-                    {project.category}
-                  </span>
+            const ProjectIcon = project.icon;
 
-                  <h2>
+            return (
+              <article
+                className={`project-card project-reveal ${project.className}`}
+                key={project.number}
+              >
+
+                {/* VISUAL */}
+<div className="project-visual">
+
+  <img
+    src={project.image}
+    alt={project.title}
+    className="project-image"
+  />
+
+  <div className="project-image-overlay"></div>
+
+  <div className="project-visual-label">
+    CODE6 / {project.number}
+  </div>
+
+</div>
+
+
+                {/* CONTENT */}
+
+                <div className="project-card-content">
+
+                  <div className="project-card-top">
+
+                    <span className="project-number">
+                      {project.number}
+                    </span>
+
+                    <span className="project-category">
+                      {project.category}
+                    </span>
+
+                    <span className="project-year">
+                      {project.year}
+                    </span>
+
+                  </div>
+
+
+                  <h3>
                     {project.title}
-                    <br />
-                    <span>{project.title2}</span>
-                  </h2>
+                  </h3>
+
 
                   <p>
                     {project.description}
                   </p>
 
-                  <Link
-                    to={project.slug}
-                    className="projects-page-button"
-                  >
-                    <span>
-                      VIEW PROJECT
+
+                  <div className="project-card-bottom">
+
+                    <span className="project-type">
+                      {project.type}
                     </span>
 
-                    <strong>
-                      ↗
-                    </strong>
-                  </Link>
+                    <button
+                      className="project-view"
+                      type="button"
+                      aria-label={`View ${project.title}`}
+                    >
+                      VIEW PROJECT
+
+                      <ArrowUpRight
+                        size={18}
+                        strokeWidth={1.5}
+                      />
+                    </button>
+
+                  </div>
 
                 </div>
 
-              </div>
-
-
-              {/* BOTTOM */}
-
-              <div className="projects-page-bottom">
-
-                <span>
-                  {project.services}
-                </span>
-
-                <span>
-                  {project.year}
-                </span>
-
-              </div>
-
-            </div>
-
-          </article>
-
-        ))}
-
-      </section>
-
-
-      {/* =========================================
-          CTA
-      ========================================= */}
-
-      <section className="projects-page-cta">
-
-        <div className="projects-cta-inner">
-
-          <div className="projects-cta-label">
-            HAVE AN IDEA?
-          </div>
-
-          <h2>
-            Let's build
-            <br />
-            <span>something remarkable.</span>
-          </h2>
-
-          <p>
-            Have a business idea, digital product or
-            technology challenge? Let's turn it into
-            something meaningful.
-          </p>
-
-          <Link
-            to="/contact"
-            className="projects-cta-button"
-          >
-            <span>
-              START A PROJECT
-            </span>
-
-            <strong>
-              ↗
-            </strong>
-          </Link>
+              </article>
+            );
+          })}
 
         </div>
 
       </section>
 
+
+      {/* CAPABILITIES */}
+
+      <section className="projects-capabilities project-reveal">
+
+        
+
+        <div className="projects-capabilities-content">
+
+          <span>
+            04 - WHAT WE CREATE
+          </span>
+
+          <h2>
+            Digital experiences
+            <br />
+            <em>built to perform.</em>
+          </h2>
+
+        </div>
+
+
+        <div className="projects-capability-list">
+
+          <div>
+            <span>01</span>
+            <strong>Websites & Platforms</strong>
+            <p>High-performance digital experiences.</p>
+          </div>
+
+          <div>
+            <span>02</span>
+            <strong>Mobile Applications</strong>
+            <p>Connected experiences for modern users.</p>
+          </div>
+
+          <div>
+            <span>03</span>
+            <strong>Digital Products</strong>
+            <p>Scalable products built around real needs.</p>
+          </div>
+
+          <div>
+            <span>04</span>
+            <strong>Custom Solutions</strong>
+            <p>Technology designed for your business.</p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* CTA */}
+
+      <section className="projects-cta project-reveal">
+
+        
+
+        <div className="projects-cta-content">
+
+          <span>
+            HAVE A PROJECT IN MIND?
+          </span>
+
+          <h2>
+            Let's create
+            <br />
+            <em>something great.</em>
+          </h2>
+
+        </div>
+
+
+        <Link
+          to="/contact"
+          className="projects-cta-button"
+        >
+          <span>START A PROJECT</span>
+
+          <ArrowUpRight
+            size={21}
+            strokeWidth={1.4}
+          />
+        </Link>
+
+      </section>
+
     </main>
+    </>
   );
 }
