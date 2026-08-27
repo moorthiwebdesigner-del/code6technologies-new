@@ -976,6 +976,8 @@ isolation: isolate;
 
 @media (max-width: 1000px) {
 
+
+  .projects-hero, .projects-intro, .projects-list {padding: 50px 0;}
   .projects-hero-content {
     grid-template-columns: 1fr;
 
@@ -989,7 +991,8 @@ isolation: isolate;
   }
 
   .projects-capabilities {
-    grid-template-columns: 70px 1fr;
+    grid-template-columns:  1fr;
+    padding: 50px 0;
   }
 
   .projects-capability-list {
@@ -997,7 +1000,8 @@ isolation: isolate;
   }
 
   .projects-cta {
-    grid-template-columns: 60px 1fr;
+            grid-template-columns: 1fr;
+        padding: 50px 0;
   }
 
   .projects-cta-button {
@@ -1016,7 +1020,7 @@ isolation: isolate;
   .projects-hero {
     width: 88%;
 
-    padding: 100px 0 70px;
+    padding: 50px 0 50px;
   }
 
   .projects-hero-note {
@@ -1024,7 +1028,7 @@ isolation: isolate;
   }
 
   .projects-hero-content {
-    margin-top: 70px;
+    margin-top: 65px;
   }
 
   .projects-hero-content h1 {
@@ -1038,13 +1042,13 @@ isolation: isolate;
 
     gap: 25px;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .projects-list {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .project-cards {
@@ -1070,7 +1074,7 @@ isolation: isolate;
 
     grid-template-columns: 1fr;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .projects-capability-list {
@@ -1082,7 +1086,7 @@ isolation: isolate;
 
     grid-template-columns: 1fr;
 
-    padding: 70px 0 80px;
+    padding: 50px 0 50px;
 
     gap: 25px;
   }

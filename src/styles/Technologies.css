@@ -436,7 +436,7 @@
 
   margin: 0 auto;
 
-  padding: 100px 0 130px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 
@@ -782,6 +782,8 @@ justify-content: space-between;
 
 @media (max-width: 1000px) {
 
+  .technologies-hero, .technology-intro {padding: 50px 0;}
+
   .technologies-hero-content {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -791,10 +793,12 @@ justify-content: space-between;
   .technology-process {
     grid-template-columns: 1fr;
     gap: 60px;
+    padding: 50px 0;;
   }
 
   .technologies-page .technology-card {
-    grid-template-columns: 50px 1fr 30px;
+    grid-template-columns: auto auto auto;
+        padding: 20px;
   }
 
   .technology-stack-items {
@@ -807,7 +811,7 @@ justify-content: space-between;
   }
 
   .technology-cta {
-    grid-template-columns: 60px 1fr;
+    grid-template-columns:  1fr; padding: 50px 0;
   }
 
   .technology-cta-button {
@@ -826,7 +830,7 @@ justify-content: space-between;
   .technologies-hero {
     width: 88%;
 
-    padding: 50px 0 0px;
+    padding: 50px 0px;
   }
 
   .technologies-status {
@@ -848,22 +852,20 @@ justify-content: space-between;
 
     gap: 25px;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .technology-stack,
   .technology-process {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .technologies-page .technology-card {
-    grid-template-columns: 35px 1fr 25px;
-
-    gap: 15px;
-
-    padding: 25px 0;
+           grid-template-columns: auto;
+        gap: 15px;
+        padding: 20px;
   }
 
   .technology-card-main h3 {

@@ -400,6 +400,9 @@
 
 @media (max-width: 1000px) {
 
+
+ 
+
   .testimonials-inner {
     width: calc(100% - 100px);
   }
@@ -497,3 +500,5 @@
   }
 
 }
+
+

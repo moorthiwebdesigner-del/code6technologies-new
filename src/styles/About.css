@@ -886,6 +886,8 @@ isolation: isolate;
 
 @media (max-width: 1000px) {
 
+  .about-hero, .about-intro, .about-values {padding: 50px 0;}
+
   .about-hero-content {
     grid-template-columns: 1fr;
 
@@ -895,11 +897,11 @@ isolation: isolate;
   .about-section-heading {
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 35px; margin-bottom: 50px;
   }
 
   .about-technology {
-    grid-template-columns: 70px 1fr;
+    grid-template-columns:  1fr; padding: 50px 0;
 
     gap: 35px;
   }
@@ -909,7 +911,7 @@ isolation: isolate;
   }
 
   .about-cta {
-    grid-template-columns: 60px 1fr;
+    grid-template-columns:  1fr; padding: 50px 0;
   }
 
   .about-cta-button {
@@ -928,7 +930,7 @@ isolation: isolate;
   .about-hero {
     width: 88%;
 
-    padding: 50px 0 0px;
+    padding: 50px 0 50px;
   }
 
   .about-meta {
@@ -950,7 +952,7 @@ isolation: isolate;
 
     gap: 25px;
 
-    padding: 75px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .about-intro-grid {
@@ -986,7 +988,7 @@ isolation: isolate;
   .about-values {
     width: 88%;
 
-    padding: 90px 0;
+    padding: 50px 0;
   }
 
   .about-value-grid {
@@ -1012,7 +1014,7 @@ isolation: isolate;
 
     grid-template-columns: 1fr;
 
-    padding: 80px 0;
+    padding: 50px 0;
   }
 
   .about-tech-number {
@@ -1024,7 +1026,7 @@ isolation: isolate;
 
     grid-template-columns: 1fr;
 
-    padding: 75px 0 90px;
+    padding: 50px 0 50px;
 
     gap: 25px;
   }

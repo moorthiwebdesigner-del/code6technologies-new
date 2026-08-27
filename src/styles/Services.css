@@ -903,6 +903,12 @@ isolation: isolate;
 ========================================================= */
 
 @media (max-width: 1000px) {
+  .services-hero, .services-intro, .services-list{padding: 50px 0;}
+
+  .service-features {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
   .services-hero-content {
     grid-template-columns: 1fr;
@@ -914,16 +920,18 @@ isolation: isolate;
     grid-template-columns: 1fr;
 
     gap: 35px;
+            margin-bottom: 50px;
   }
 
   .services-process {
     grid-template-columns: 1fr;
 
-    gap: 70px;
+    gap: 70px; padding: 50px 0;
   }
 
   .services-cta {
-    grid-template-columns: 60px 1fr;
+            grid-template-columns: 1fr;
+        padding: 50px 0;
   }
 
   .services-cta-button {
@@ -942,7 +950,7 @@ isolation: isolate;
   .services-hero {
     width: 88%;
 
-    padding: 100px 0 70px;
+    padding: 50px 0 50px;
   }
 
   .services-note {
@@ -964,13 +972,13 @@ isolation: isolate;
 
     gap: 25px;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .services-list {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .service-cards {
@@ -996,7 +1004,7 @@ isolation: isolate;
   .services-process {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .services-process-heading {
@@ -1020,7 +1028,7 @@ isolation: isolate;
 
     grid-template-columns: 1fr;
 
-    padding: 70px 0 80px;
+    padding: 50px 0 50px;
 
     gap: 25px;
   }

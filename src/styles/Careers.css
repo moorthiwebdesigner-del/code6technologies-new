@@ -446,7 +446,7 @@ isolation: isolate;
 
   margin: 0 auto;
 
-  padding: 100px 0 130px;
+  padding: 100px 0 100px;
 
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 
@@ -891,6 +891,15 @@ justify-content: space-between;
 
 @media (max-width: 1000px) {
 
+      .careers-intro {
+        padding: 50px 0 50px;
+      }
+
+
+      .careers-hero {
+        padding: 50px 0 50px;
+    }
+
   .careers-hero-content {
     grid-template-columns: 1fr;
 
@@ -900,9 +909,10 @@ justify-content: space-between;
   .career-values {
     grid-template-columns: 1fr;
 
-    gap: 60px;
+    gap: 60px; padding: 50px 0;
   }
 
+  .career-openings {padding: 50px 0;;}
   .career-openings-top {
     grid-template-columns: 1fr;
 
@@ -910,10 +920,12 @@ justify-content: space-between;
   }
 
   .career-apply {
-    grid-template-columns: 60px 1fr;
+    grid-template-columns:  1fr;
 
     gap: 35px;
+        padding: 50px 0;
   }
+  .career-bottom {  padding: 50px 0;}
 
   .career-apply-button {
     grid-column: 2;
@@ -931,7 +943,7 @@ justify-content: space-between;
   .careers-hero {
     width: 88%;
 
-    padding: 50px 0 0px;
+    padding: 50px 0 50px;
   }
 
   .careers-status {
@@ -949,7 +961,7 @@ justify-content: space-between;
   .careers-intro {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
 
     grid-template-columns: 1fr;
 
@@ -959,7 +971,7 @@ justify-content: space-between;
   .career-values {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .career-value {
@@ -971,7 +983,7 @@ justify-content: space-between;
   .career-openings {
     width: 88%;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .career-role {
@@ -997,7 +1009,7 @@ justify-content: space-between;
 
     grid-template-columns: 1fr;
 
-    padding: 70px 0 90px;
+    padding: 50px 0 50px;
   }
 
   .career-apply-button {
