@@ -396,7 +396,7 @@ isolation: isolate;
    SERVICES LIST
 ========================================================= */
 
-.services-list {
+.services-page .services-list {
   position: relative;
 
   z-index: 2;
@@ -903,7 +903,7 @@ isolation: isolate;
 ========================================================= */
 
 @media (max-width: 1000px) {
-  .services-hero, .services-intro, .services-list{padding: 50px 0;}
+  .services-hero, .services-intro, .services-page .services-list{padding: 50px 0;}
 
   .service-features {
     display: grid;
@@ -975,7 +975,7 @@ isolation: isolate;
     padding: 50px 0 50px;
   }
 
-  .services-list {
+  .services-page .services-list {
     width: 88%;
 
     padding: 50px 0 50px;

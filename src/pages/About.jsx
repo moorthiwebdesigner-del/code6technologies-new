@@ -99,6 +99,7 @@ export default function About() {
           </div>
 
           <div className="about-meta">
+            <span></span>
             DIGITAL / DESIGN / TECHNOLOGY
           </div>
 

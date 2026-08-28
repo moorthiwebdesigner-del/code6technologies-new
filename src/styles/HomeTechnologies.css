@@ -12,7 +12,7 @@
 
   margin: 0 auto;
 
-  padding: 0px 0 180px;
+  padding: 100px 0 100px;
 
 }
 
@@ -29,7 +29,7 @@
 
   align-items: flex-end;
 
-  padding-bottom: 75px;
+  padding-bottom: 50px;
 
   border-bottom: 1px solid #e8ecef;
 
@@ -97,10 +97,9 @@
 
   margin: 0;
 
- font-family: "Manrope", sans-serif;
-    font-size: clamp(42px, 5vw, 76px);
-    line-height: 1.03;
-    letter-spacing: -4px;
+font-size: clamp(38px, 4vw, 65px);
+    line-height: 1;
+    letter-spacing: -0.065em;
     font-weight: 700;
     color: #0b1f33;
 
@@ -598,12 +597,27 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
 
+.technology-card-bottom h2 {
+    font-size: 20px;
+}
+
+  .technologies-label {padding: 0 0 20px;;}
+  .technologies-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    display: block;
+}
+
+.technologies-heading {
+    text-align: left;
+}
   .technologies-section {
 
     width:
-      calc(100% - 100px);
+      calc(100% - 14%);
+          padding: 50px 0 50px;
 
   }
 
@@ -622,17 +636,17 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
   .technologies-section {
 
     width:
-      calc(100% - 30px);
+      calc(100% - 14%);
 
     padding:
-      100px
+      50px
       0
-      120px;
+      50px;
 
   }
 
@@ -648,7 +662,7 @@
 
   .technologies-heading {
 
-    margin-top: 30px;
+    margin-top: 0px;
 
     text-align: left;
 

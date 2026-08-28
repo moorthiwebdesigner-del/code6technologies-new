@@ -12,6 +12,7 @@ isolation: isolate;
   background: #f7f8fa;
     color: #092238;
 }
+
 .about-page::before {
     content: "";
     position: fixed;

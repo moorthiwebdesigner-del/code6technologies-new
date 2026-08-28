@@ -5,7 +5,7 @@
 .testimonials-section {
   position: relative;
 
-  padding: 120px 0 100px;
+  padding: 100px 0 100px;
 
   background: #0b1f33;
 
@@ -35,7 +35,7 @@
 
   align-items: flex-end;
 
-  padding-bottom: 70px;
+  padding-bottom: 50px;
 
   border-bottom: 1px solid
     rgba(255, 255, 255, .12);
@@ -45,12 +45,13 @@
     text-align: right;
 }
 
+.testimonials-heading P {padding: 0 0 12PX;}
+
 .testimonials-header h2 {
     margin: 0;
-    font-family: "Manrope", sans-serif;
-    font-size: clamp(42px, 5vw, 76px);
-    line-height: 1.03;
-    letter-spacing: -4px;
+    font-size: clamp(38px, 4vw, 65px);
+    line-height: 1;
+    letter-spacing: -0.065em;
     font-weight: 700;
     color: #f15a24;
 }
@@ -113,7 +114,7 @@
 
   align-items: center;
 
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 
@@ -400,9 +401,20 @@
 
 @media (max-width: 1000px) {
 
-
- 
-
+.testimonials-heading {
+    text-align: left;
+}
+ .testimonials-section {
+    position: relative;
+    padding: 50px 0;
+ }
+.testimonials-header {
+    padding-bottom: 30px;
+            display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px
+}
   .testimonials-inner {
     width: calc(100% - 100px);
   }
@@ -434,17 +446,15 @@
 @media (max-width: 700px) {
 
   .testimonials-section {
-    padding: 100px 0 100px;
+    padding: 50px 0 ;
   }
 
   .testimonials-inner {
-    width: calc(100% - 30px);
+    width: calc(100% - 14%);
   }
 
   .testimonials-header {
-    display: block;
-
-    padding-bottom: 45px;
+    
   }
 
   .testimonials-header > p {
@@ -458,13 +468,13 @@
 
     min-height: auto;
 
-    padding: 60px 0;
+    padding:30px 0;
   }
 
   .testimonial-mark {
     font-size: 90px;
 
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .testimonial-content blockquote {
@@ -478,7 +488,7 @@
   }
 
   .testimonial-navigation {
-    margin-top: 60px;
+    margin-top: 30px;
 
     flex-direction: row;
 

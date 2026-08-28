@@ -5,7 +5,6 @@
 .selected-work {
   position: relative;
   width: 100%;
-  background: #f7f8f9;
   color: #0b1f33;
   overflow: clip;
 }
@@ -18,7 +17,7 @@
 .projects-page-header {
   width: min(1400px, calc(100% - 100px));
   margin: 0 auto;
-  padding: 50px 0 90px;
+  padding: 100px 0 50px;
 
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -55,10 +54,9 @@
 .projects-page-heading h1 {
   margin: 0;
 
- font-family: "Manrope", sans-serif;
-    font-size: clamp(42px, 5vw, 76px);
-    line-height: 1.03;
-    letter-spacing: -4px;
+    font-size: clamp(38px, 4vw, 65px);
+    line-height: 1;
+    letter-spacing: -0.065em;
     font-weight: 700;
     color: #0b1f33;
 }
@@ -218,7 +216,7 @@
     linear-gradient(
       180deg,
       rgba(5, 20, 32, 0.03) 15%,
-      rgba(5, 20, 32, 0.12) 40%,
+      rgba(5, 20, 32, 0.40) 50%,
       rgba(5, 20, 32, 0.82) 100%
     );
 
@@ -288,9 +286,8 @@
 .projects-page-content h2 {
   margin: 0 0 20px;
 
-  font-family: "Manrope", sans-serif;
 
-  font-size: clamp(38px, 4vw, 68px);
+  font-size: clamp(34px, 3.5vw, 58px);
 
   line-height: 0.9;
 
@@ -587,15 +584,17 @@
 @media (max-width: 900px) {
 
   .projects-page-header {
-    width: calc(100% - 50px);
+    width: calc(100% - 14%);
 
-    padding: 120px 0 70px;
+    padding: 50px 0 50px;
 
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 20px;
   }
 
-  
+  .projects-page-heading {
+    text-align: left;
+}
 
   .projects-page-list {
     width: calc(100% - 50px);
@@ -645,9 +644,9 @@
 @media (max-width: 600px) {
 
   .projects-page-header {
-    width: calc(100% - 40px);
+    width: calc(100% - 14%);
 
-    padding: 100px 0 55px;
+    padding: 50px 0 50px;
   }
 
   .projects-page-heading h1 {

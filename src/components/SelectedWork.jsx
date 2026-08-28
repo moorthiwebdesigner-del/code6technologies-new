@@ -15,9 +15,8 @@ export default function SelectedWork() {
         "A modern digital platform designed to create a strong and scalable business presence.",
       services: "STRATEGY · DESIGN · DEVELOPMENT",
       year: "2026",
-      image:
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1800&q=85",
-      slug: "/projects/digital-business-platform",
+      image:"/images//projects/digital-business-platform.jpg",
+      slug: "/images//projects/digital-business-platform",
     },
 
     {
@@ -30,8 +29,8 @@ export default function SelectedWork() {
       services: "RESEARCH · UX · INTERFACE DESIGN",
       year: "2026",
       image:
-        "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1800&q=85",
-      slug: "/projects/modern-brand-experience",
+        "/images/projects/modern-brand-experience.jpg",
+      slug: "/images/projects/modern-brand-experience",
     },
 
     {
@@ -44,8 +43,8 @@ export default function SelectedWork() {
       services: "PRODUCT · DEVELOPMENT · TECHNOLOGY",
       year: "2026",
       image:
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1800&q=85",
-      slug: "/projects/smart-mobile-solution",
+        "/images/projects/smart-mobile-solution.jpg",
+      slug: "/images/projects/smart-mobile-solution",
     },
   ];
 
@@ -123,35 +122,6 @@ export default function SelectedWork() {
       </section>
 
 
-      {/* =================================================
-          PROJECT NAVIGATION
-      ================================================= */}
-
-      <div className="projects-page-navigation">
-
-        <span className="projects-page-current">
-          {String(activeProject + 1).padStart(2, "0")}
-        </span>
-
-        <div className="projects-page-line">
-
-          <span
-            style={{
-              height: `${
-                ((activeProject + 1) /
-                  projects.length) *
-                100
-              }%`,
-            }}
-          />
-
-        </div>
-
-        <span className="projects-page-total">
-          {String(projects.length).padStart(2, "0")}
-        </span>
-
-      </div>
 
 
       {/* =================================================
